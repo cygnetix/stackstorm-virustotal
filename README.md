@@ -1,4 +1,4 @@
-# Virus Total Integration Pack
+# VirusTotal Integration Pack
 
 Intergration with the https://virustotal.com service. Currently it allows for file hashes to be submitted and the reputation of that file will be returned.
 
@@ -12,4 +12,4 @@ It should contain:
 
 ## Actions
 
-* ``file_hash`` - Submits a file hash (md5, sha1, sha256 etc) to the virustotal.com API and returns that file's reputation, if known.
+* ``check_hash`` - Submits a file hash (md5, sha1, sha256 etc) to the virustotal.com API and returns that file's reputation, if known.
