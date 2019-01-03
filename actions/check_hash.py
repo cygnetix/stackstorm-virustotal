@@ -14,6 +14,6 @@ class CheckHash(Action):
         
         # if VT has no record, we want to add results and totals fields
         if response.get('results').get('scan_id') == None:
-            return False
+            return (True, {"results": None})
 
-        return response
+        return (True, response)

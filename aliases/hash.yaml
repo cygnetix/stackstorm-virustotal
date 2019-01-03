@@ -8,16 +8,16 @@ formats:
 result:
   format: |
     {%- if execution.status == 'succeeded' -%}
-    Detections: {{ execution.result.result.results.positives }}
-    Scan date: {{ execution.result.result.results.scan_date }}
-    {{ execution.result.result.results.permalink }}
+    Detections: {{ execution.result.result.results.positives|default(0) }}
+    Scan date: {{ execution.result.result.results.scan_date|default('-') }}
+    {{ execution.result.result.results.permalink|default('*No results found*') }}
     {%- else -%}
     ```{{ execution.result.stderr }}```
     {%- endif -%}
   extra:
     slack:
       color: >-
-        {%- if execution.result.result.results.positives == 0 -%}
+        {%- if execution.result.result.results.positives|default(0) == 0 -%}
         good
         {%- else -%}
         danger
