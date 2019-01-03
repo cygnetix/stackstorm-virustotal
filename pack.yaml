@@ -1,0 +1,10 @@
+---
+name: virustotal
+ref: virustotal
+description: 'st2 content pack containing integrations for the https://virustotal.com api'
+version: 0.1.0
+keywords:
+  - malware
+  - security
+author: cygnetix
+email: cygnetix@gmail.com

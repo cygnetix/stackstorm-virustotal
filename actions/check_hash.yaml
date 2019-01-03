@@ -1,0 +1,11 @@
+---
+name: "check_hash"
+runner_type: "python-script"
+description: "Checks a file hash in VT to see if it's marked as malicious"
+enabled: true
+entry_point: "check_hash.py"
+parameters:
+  file_hash:
+    type: "string"
+    description: "md5, sha1 or sha256 file hash"
+    required: true

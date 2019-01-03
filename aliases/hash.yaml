@@ -1,0 +1,24 @@
+---
+name: "check_hash"
+pack: "virustotal"
+action_ref: "virustotal.check_hash"
+description: "Submits a file hash to virustotal.com and displays the number of positive vendor detections"
+formats:
+  - "vt hash {{file_hash}}"
+result:
+  format: |
+    {%- if execution.status == 'succeeded' -%}
+    Detections: {{ execution.result.result.results.positives }}
+    Scan date: {{ execution.result.result.results.scan_date }}
+    {{ execution.result.result.results.permalink }}
+    {%- else -%}
+    ```{{ execution.result.stderr }}```
+    {%- endif -%}
+  extra:
+    slack:
+      color: >-
+        {%- if execution.result.result.results.positives == 0 -%}
+        good
+        {%- else -%}
+        danger
+        {%- endif -%}
