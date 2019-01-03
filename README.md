@@ -8,8 +8,7 @@ Copy the example configuration in [virustotal.yaml.example](./virustotal.yaml.ex
 
 It should contain:
 
-* ``apikey`` - An apikey obtained by signing up for an account on https://urlscan.io.
-* ``verify`` - Determines if SSL is validated (defautls to on)
+* ``apikey`` - An apikey obtained by signing up for an account on https://virustotal.com.
 
 ## Actions
 
