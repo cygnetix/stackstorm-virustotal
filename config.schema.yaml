@@ -1,5 +1,5 @@
 ---
-  api_key:
+  apikey:
     description: "API key"
     type: "string"
     secret: true

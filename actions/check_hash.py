@@ -7,9 +7,9 @@ from st2common.runners.base_action import Action
 
 class CheckHash(Action):
     def run(self, file_hash):
-        api_key = self.config['api_key']
+        apikey = self.config['apikey']
         
-        vt = VirusTotalPublicApi(api_key)
+        vt = VirusTotalPublicApi(apikey)
         response = vt.get_file_report(file_hash)
         
         # if VT has no record, we want to add results and totals fields
