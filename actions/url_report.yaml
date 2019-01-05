@@ -1,0 +1,11 @@
+---
+name: "url_report"
+runner_type: "python-script"
+description: "Retrieve URL scan reports"
+enabled: true
+entry_point: "url_report.py"
+parameters:
+  resource:
+    type: "string"
+    description: "The resource argument must be the URL for which you want to retrieve the most recent report. You may also specify a scan_id returned by the /url/scan endpoint to access a specific report."
+    required: true

@@ -13,3 +13,4 @@ It should contain:
 ## Actions
 
 * ``file_report`` - Retrieve file scan reports.
+* ``url_report`` - Retrieve URL scan reports.
