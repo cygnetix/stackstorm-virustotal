@@ -14,3 +14,8 @@ It should contain:
 
 * ``file_report`` - Retrieve file scan reports.
 * ``url_report`` - Retrieve URL scan reports.
+
+## References
+
+The names of actions used in this integration pack follow the naming convention used by VirusTotal's API. Refer to VT's API documentation for a better understanding of how to use this pack.
+* https://developers.virustotal.com/v2.0/reference
