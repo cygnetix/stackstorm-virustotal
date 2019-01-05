@@ -12,4 +12,4 @@ It should contain:
 
 ## Actions
 
-* ``check_hash`` - Submits a file hash (md5, sha1, sha256 etc) to the virustotal.com API and returns that file's reputation, if known.
+* ``file_report`` - Retrieve file scan reports.

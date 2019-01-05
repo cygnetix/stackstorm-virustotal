@@ -5,14 +5,19 @@ import json
 from virus_total_apis import PublicApi as VirusTotalPublicApi
 from st2common.runners.base_action import Action
 
-class CheckHash(Action):
-    def run(self, file_hash):
+__all__ = [
+    'FileReport'
+]
+
+class FileReport(Action):
+    def run(self, resource):
         apikey = self.config['apikey']
-        
+
+        # https://developers.virustotal.com/v2.0/reference#file-report
         vt = VirusTotalPublicApi(apikey)
-        response = vt.get_file_report(file_hash)
+        response = vt.get_file_report(resource)
         
-        # if VT has no record, we want to add results and totals fields
+        # If VT has no record, we want to add results and totals fields
         if response.get('results').get('scan_id') == None:
             return (True, {"results": None})
 

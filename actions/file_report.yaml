@@ -1,0 +1,11 @@
+---
+name: "file_report"
+runner_type: "python-script"
+description: "Retrieve file scan reports"
+enabled: true
+entry_point: "file_report.py"
+parameters:
+  resource:
+    type: "string"
+    description: "The resource argument can be the MD5, SHA-1 or SHA-256 of a file for which you want to retrieve the most recent antivirus report. You may also specify a scan_id returned by the /file/scan endpoint."
+    required: true
