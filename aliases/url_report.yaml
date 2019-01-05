@@ -1,10 +1,10 @@
 ---
-name: "check_hash"
+name: "url"
 pack: "virustotal"
-action_ref: "virustotal.check_hash"
-description: "Submits a file hash to virustotal.com and displays the number of positive vendor detections"
+action_ref: "virustotal.url_report"
+description: "Submits a url, or report id of a previous scan, to virustotal and displays the number of positive vendor detections"
 formats:
-  - "vt hash {{file_hash}}"
+  - "vt url {{resource}}"
 result:
   format: |
     {%- if execution.status == 'succeeded' -%}
